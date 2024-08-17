@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 alphabet = [alph for alph in 'abcdefghijklmnopqrstuvwxyz']
 numbers = [num for num in '0123456789']
-punctuations = [punc for punc in '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~']
+punctuations = [punc for punc in ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~']
 
 def caesar(original_text, shift_amount, encode_or_decode):
     output_text = ""
