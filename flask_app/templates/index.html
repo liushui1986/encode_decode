@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Web App</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Caesar Cipher Web App</h1>
+        <pre>{{ logo }}</pre>
+        
+        <form method="POST">
+            <label for="direction">Choose an option:</label>
+            <select name="direction" id="direction">
+                <option value="encode">Encode</option>
+                <option value="decode">Decode</option>
+            </select>
+            <br><br>
+
+            <label for="text">Enter your message:</label>
+            <textarea name="text" id="text" rows="4" cols="50" required></textarea>
+            <br><br>
+
+            <label for="shift">Enter the shift number:</label>
+            <input type="number" name="shift" id="shift" required>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if result %}
+            <h2>Here is the {{ direction }}d result:</h2>
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
